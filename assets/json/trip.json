@@ -1,0 +1,46 @@
+{
+  "message": "ok",
+  "code": 200,
+  "data": [
+    {
+      "id": 1,
+      "title": "Villa Asri Makmur Sekali",
+      "location": "Bali",
+      "price": 1000000,
+      "rating": 4.5,
+      "image": "assets/images/villa-1.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "Villa Selamat Damai",
+      "location": "Yogyakarta",
+      "price": 2000000,
+      "rating": 4.5,
+      "image": "assets/images/villa-2.png"
+    },
+    {
+      "id": 3,
+      "title": "Villa Bersih Indah Nyaman",
+      "location": "Lombok",
+      "price": 3000000,
+      "rating": 4.7,
+      "image": "assets/images/villa-3.png"
+    },
+    {
+      "id": 4,
+      "title": "Villa Kerajaan Banyuwangi",
+      "location": "Malang",
+      "price": 2240000,
+      "rating": 4.9,
+      "image": "assets/images/villa-4.png"
+    },
+    {
+      "id": 5,
+      "title": "Villa Maju Mapan",
+      "location": "Raja Ampat",
+      "price": 3277777,
+      "rating": 4.5,
+      "image": "assets/images/villa-5.png"
+    }
+  ]
+}
