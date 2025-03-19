@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:wizh_test/feature/main/main_route.dart';
+import 'package:wizh_test/feature/trip/trip_route.dart';
 // import 'package:wizh_test/feature/auth/auth_route.dart';
 // import 'package:wizh_test/feature/bakulku/bakulku_route.dart';
 // import 'package:wizh_test/feature/edukasi/edukasi_route.dart';
@@ -15,7 +16,7 @@ import 'package:wizh_test/feature/main/main_route.dart';
 class BaseRoute {
   static List<GetPage> route = [
     ...MainRoute.routes,
-    // ...AuthRoute.routes,
+    ...TripRoute.routes,
     // ...BakulkuRoute.routes,
     // ...PohonDanaRoute.routes,
     // ...EdukasiRoute.routes,

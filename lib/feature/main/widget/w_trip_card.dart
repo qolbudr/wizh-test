@@ -3,6 +3,7 @@ import 'package:wizh_test/core/constant/const.dart';
 import 'package:wizh_test/core/themes/color_theme.dart';
 import 'package:wizh_test/core/themes/text_theme.dart';
 import 'package:wizh_test/core/utils/extension.dart';
+import 'package:wizh_test/feature/trip/trip_route.dart';
 import 'package:wizh_test/repository/r_trip/model/trip_model/trip_model.dart';
 
 class WTripCard extends StatelessWidget {
@@ -12,7 +13,7 @@ class WTripCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () => TripRoute.toDetail(id: item.id),
       child: Container(
         width: 200,
         clipBehavior: Clip.antiAliasWithSaveLayer,

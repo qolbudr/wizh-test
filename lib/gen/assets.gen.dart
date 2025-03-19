@@ -94,11 +94,14 @@ class $AssetsImagesGen {
 class $AssetsJsonGen {
   const $AssetsJsonGen();
 
+  /// File path: assets/json/trip-detail.json
+  String get tripDetail => 'assets/json/trip-detail.json';
+
   /// File path: assets/json/trip.json
   String get trip => 'assets/json/trip.json';
 
   /// List of all assets
-  List<String> get values => [trip];
+  List<String> get values => [tripDetail, trip];
 }
 
 class Assets {

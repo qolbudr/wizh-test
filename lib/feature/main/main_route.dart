@@ -12,7 +12,4 @@ class MainRoute {
   ];
   
   static Future? toMain() => Get.offAllNamed(prefix);
-  // static Future? toConsultant() => Get.offAllNamed(consultant);
-  // static Future? toOTP(VOTPMainParam param) => Get.toNamed(otp, arguments: param);
-  // static Future? toScanBarcode() => Get.toNamed(scan);
 }
