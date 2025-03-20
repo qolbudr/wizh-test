@@ -22,7 +22,7 @@ class VMainMobile extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         elevation: 0,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(IconsaxPlusLinear.home_2),
             activeIcon: Icon(IconsaxPlusBold.home_2),

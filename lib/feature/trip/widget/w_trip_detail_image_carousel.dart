@@ -33,14 +33,14 @@ class WTripDetailImageCarousel extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(width: 80),
+              const SizedBox(width: 60),
               const Spacer(),
               ...List.generate(
                 3,
                 (index) => Container(
                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), color: index == tabIndex ? TColors.baseWhite : TColors.baseWhite.withOpacity(0.6)),
-                  width: index == tabIndex ? 20 : 8,
-                  height: 8,
+                  width: index == tabIndex ? 20 : 6,
+                  height: 6,
                 ),
               ).joinWidget(Const.gap()),
               const Spacer(),
@@ -52,9 +52,9 @@ class WTripDetailImageCarousel extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    const Icon(IconsaxPlusBold.gallery, color: TColors.baseWhite, size: 16),
+                    const Icon(IconsaxPlusBold.gallery, color: TColors.baseWhite, size: 14),
                     Const.gap(),
-                    Text("Galeri", style: TText.bodySMedium(color: TColors.baseWhite)),
+                    Text("Galeri", style: TText.bodyXSMedium(color: TColors.baseWhite)),
                   ],
                 ),
               )

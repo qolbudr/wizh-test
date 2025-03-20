@@ -39,7 +39,7 @@ class WTripCard extends StatelessWidget {
                     Text(item.location!, style: TText.bodyXSRegular()),
                     Text("${item.rating}/5 (942 Review)", style: TText.bodyXSRegular()),
                     const Spacer(),
-                    Text(item.price!.toCurrency(), style: TText.bodyBold(color: TColors.primaryColor)),
+                    Text(item.price!.toCurrency(), style: TText.bodyMBold(color: TColors.primaryColor)),
                     Const.gap(x: 2),
                   ],
                 ),

@@ -16,33 +16,35 @@ class WTripDetailHeader extends StatelessWidget {
       left: 0,
       right: 0,
       child: Container(
-        padding: EdgeInsets.only(top: Const.parentMargin(x: 2), left: Const.parentMargin(), right: Const.parentMargin(), bottom: Const.parentMargin()),
+        padding: EdgeInsets.all(Const.parentMargin()),
         color: TColors.baseWhite.withOpacity(opacity),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            GestureDetector(
-              onTap: () => Get.back(),
-              child: Container(
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), color: TColors.baseWhite),
-                width: 35,
-                height: 35,
-                child: const Center(child: Icon(IconsaxPlusLinear.arrow_left_1)),
+        child: SafeArea(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              GestureDetector(
+                onTap: () => Get.back(),
+                child: Container(
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), color: TColors.baseWhite),
+                  width: 35,
+                  height: 35,
+                  child: const Center(child: Icon(IconsaxPlusLinear.arrow_left_1)),
+                ),
               ),
-            ),
-            if (opacity == 1) ...[
-              Text("Villa Asri Makmur Sekali", style: TText.bodyBold()),
+              if (opacity == 1) ...[
+                Text("Villa Asri Makmur Sekali", style: TText.bodyMBold()),
+              ],
+              GestureDetector(
+                onTap: () => Get.back(),
+                child: Container(
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), color: TColors.baseWhite),
+                  width: 35,
+                  height: 35,
+                  child: const Center(child: Icon(IconsaxPlusLinear.heart)),
+                ),
+              )
             ],
-            GestureDetector(
-              onTap: () => Get.back(),
-              child: Container(
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), color: TColors.baseWhite),
-                width: 35,
-                height: 35,
-                child: const Center(child: Icon(IconsaxPlusLinear.heart)),
-              ),
-            )
-          ],
+          ),
         ),
       ),
     );

@@ -23,7 +23,7 @@ class WTripDetailPackage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Tiket Weekday - Domestik", style: TText.bodyBold()),
+          Text("Tiket Weekday - Domestik", style: TText.bodyMBold()),
           Const.gap(x: 4),
           ...[1, 2]
               .map(
@@ -41,15 +41,15 @@ class WTripDetailPackage extends StatelessWidget {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Expanded(child: Text("[Domestik - Weekday] Tiket Masuk Villa Asri Makmur Sekali", style: TText.bodyMSemiBold())),
+                          Expanded(child: Text("[Domestik - Weekday] Tiket Masuk Villa Asri Makmur Sekali", style: TText.bodySSemiBold())),
                           Const.gap(x: 2),
-                          Text("Detail", style: TText.bodyMSemiBold(color: TColors.primaryColor)),
+                          Text("Detail", style: TText.bodySSemiBold(color: TColors.primaryColor)),
                         ],
                       ),
                       Const.gap(x: 3.5),
                       Row(
                         children: [
-                          const Icon(IconsaxPlusLinear.money),
+                          const Icon(IconsaxPlusLinear.money, size: 16),
                           Const.gap(x: 2),
                           Text("Tidak bisa refund", style: TText.bodyXSRegular()),
                         ],
@@ -57,7 +57,7 @@ class WTripDetailPackage extends StatelessWidget {
                       Const.gap(x: 2),
                       Row(
                         children: [
-                          const Icon(IconsaxPlusLinear.calendar),
+                          const Icon(IconsaxPlusLinear.calendar, size: 16),
                           Const.gap(x: 2),
                           Text("Pesan tiket untuk besok", style: TText.bodyXSRegular()),
                         ],
@@ -67,7 +67,10 @@ class WTripDetailPackage extends StatelessWidget {
                       Const.gap(x: 3.5),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [Text("Rp 493.000", style: TText.bodyBold(color: TColors.primaryColor)), WButton(onTap: () {}, label: "Pilih", size: WButtonSize.xs)],
+                        children: [
+                          Text("Rp 493.000", style: TText.bodyMBold(color: TColors.primaryColor)),
+                          WButton(onTap: () {}, label: "Pilih", size: WButtonSize.xs),
+                        ],
                       )
                     ],
                   ),

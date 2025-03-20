@@ -18,21 +18,21 @@ class WTripDetailReview extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Review", style: TText.bodyBold()),
-              WButton(type: WButtonType.textPrimary, label: "Lihat Semua", onTap: () {}),
+              Text("Review", style: TText.bodyMBold()),
+              WButton(type: WButtonType.textPrimary, label: "Lihat Semua", onTap: () {}, size: WButtonSize.small),
             ],
           ),
-          Const.gap(x: 4),
+          Const.gap(x: 2),
           Row(
             children: [
               RichText(
                 text: TextSpan(
                   text: "4.5",
-                  style: TText.headlineBold(color: TColors.baseBlack),
+                  style: TText.headingBold(color: TColors.baseBlack),
                   children: [
                     TextSpan(
                       text: "/5",
-                      style: TText.bodyBold(color: TColors.neutral60),
+                      style: TText.bodyMBold(color: TColors.neutral60),
                     ),
                   ],
                 ),
@@ -41,8 +41,8 @@ class WTripDetailReview extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Bagus", style: TText.bodyMSemiBold()),
-                  Text("Dari 942 review", style: TText.bodySRegular(color: TColors.neutral60)),
+                  Text("Bagus", style: TText.bodySSemiBold()),
+                  Text("Dari 942 review", style: TText.bodyXSRegular(color: TColors.neutral60)),
                 ],
               )
             ],

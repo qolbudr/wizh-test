@@ -53,11 +53,11 @@ class VTripDetailMobile extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Info Penting & Highlight", style: TText.bodyMSemiBold()),
+                              Text("Info Penting & Highlight", style: TText.bodySSemiBold()),
                               Const.gap(x: 2),
                               Text(
                                 "Villa Asri Makmur Sekali adalah villa yang berlokasi di Puncak, Bogor. Villa ini memiliki fasilitas yang lengkap dan nyaman untuk keluarga. Dengan harga yang terjangkau, villa ini memiliki rating 4.5/5 dari 942 review.",
-                                style: TText.bodySRegular(color: TColors.neutral60),
+                                style: TText.bodyXSRegular(color: TColors.neutral60),
                               ),
                             ],
                           ),
@@ -69,8 +69,8 @@ class VTripDetailMobile extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Paket", style: TText.bodyBold()),
-                            Text("Cek ketersediaan paket", style: TText.bodySRegular()),
+                            Text("Paket", style: TText.bodyMBold()),
+                            Text("Cek ketersediaan paket", style: TText.bodyXSRegular()),
                             Const.gap(x: 4),
                             Row(
                               children: [
@@ -80,7 +80,7 @@ class VTripDetailMobile extends StatelessWidget {
                                     border: Border.all(color: TColors.neutral30),
                                   ),
                                   padding: EdgeInsets.symmetric(vertical: Const.siblingMargin(), horizontal: Const.siblingMargin(x: 4)),
-                                  child: Text("Besok", style: TText.bodyMRegular()),
+                                  child: Text("Besok", style: TText.bodyXSRegular()),
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
@@ -88,7 +88,7 @@ class VTripDetailMobile extends StatelessWidget {
                                     border: Border.all(color: TColors.neutral30),
                                   ),
                                   padding: EdgeInsets.symmetric(vertical: Const.siblingMargin(), horizontal: Const.siblingMargin(x: 4)),
-                                  child: Text("21 Mar", style: TText.bodyMRegular()),
+                                  child: Text("21 Mar", style: TText.bodyXSRegular()),
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
@@ -96,7 +96,7 @@ class VTripDetailMobile extends StatelessWidget {
                                     border: Border.all(color: TColors.neutral30),
                                   ),
                                   padding: EdgeInsets.symmetric(vertical: Const.siblingMargin(), horizontal: Const.siblingMargin(x: 4)),
-                                  child: Text("Lainnya", style: TText.bodyMRegular()),
+                                  child: Text("Lainnya", style: TText.bodyXSRegular()),
                                 )
                               ].joinWidget(Const.gap(x: 2)),
                             ),
@@ -117,11 +117,11 @@ class VTripDetailMobile extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Deskripsi", style: TText.bodyBold()),
+                            Text("Deskripsi", style: TText.bodyMBold()),
                             Const.gap(x: 4),
                             Text(
                               "Villa Asri Makmur Sekali adalah villa yang berlokasi di Puncak, Bogor. Villa ini memiliki fasilitas yang lengkap dan nyaman untuk keluarga. Dengan harga yang terjangkau, villa ini memiliki rating 4.5/5 dari 942 review.",
-                              style: TText.bodySRegular(color: TColors.neutral60),
+                              style: TText.bodyXSRegular(color: TColors.neutral60),
                             ),
                             Const.gap(x: 4),
                             ClipRRect(
@@ -139,7 +139,7 @@ class VTripDetailMobile extends StatelessWidget {
                             Const.gap(x: 4),
                             Padding(
                               padding: EdgeInsets.symmetric(horizontal: Const.parentMargin()),
-                              child: Text("Mungkin Kamu Juga Suka", style: TText.bodyBold()),
+                              child: Text("Mungkin Kamu Juga Suka", style: TText.bodyMBold()),
                             ),
                             Const.gap(x: 4),
                             SizedBox(
@@ -158,7 +158,7 @@ class VTripDetailMobile extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Const.gap(x: 30)
+                      Const.gap(x: 25)
                     ],
                   ),
                   WTripDetailHeader(opacity: o.state.headerOpacity),
@@ -184,12 +184,13 @@ class VTripDetailMobile extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Mulai dari", style: TText.bodyMMedium()),
-                                Text(493000.toCurrency(), style: TText.subHeadingBold(color: TColors.primaryColor)),
+                                Text("Mulai dari", style: TText.bodySMedium()),
+                                Text(493000.toCurrency(), style: TText.bodyBold(color: TColors.primaryColor)),
                               ],
                             ),
                           ),
                           WButton(
+                            size: WButtonSize.small,
                             onTap: () => o.scrollController.animateTo(765, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut),
                             label: "Pilih Tiket",
                           )

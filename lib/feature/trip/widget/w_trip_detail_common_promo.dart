@@ -20,7 +20,7 @@ class WTripDetailCommonPromo extends StatelessWidget {
             children: [
               Assets.images.hotel.image(width: 30, height: 30),
               Const.gap(x: 4),
-              Expanded(child: Text("Klaim Benefit Khusus Log In", style: TText.bodySemiBold(), maxLines: 1, overflow: TextOverflow.ellipsis)),
+              Expanded(child: Text("Klaim Benefit Khusus Log In", style: TText.bodySSemiBold(), maxLines: 1, overflow: TextOverflow.ellipsis)),
               Const.gap(x: 4),
               const Icon(IconsaxPlusLinear.arrow_right_3, size: 20),
             ],

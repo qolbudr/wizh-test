@@ -20,14 +20,14 @@ class VSplashScreenMobile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Spacer(),
-              Image.asset('assets/logo.png'),
-              Const.gap(x: 2),
+              Image.asset('assets/logo.png', width: 66),
+              Const.gap(x: 4),
               const SizedBox(
-                width: 80,
+                width: 50,
                 child: LinearProgressIndicator(),
               ),
               const Spacer(),
-              Text("Wizh Trip", style: TText.subHeadingSemiBold(color: TColors.baseWhite)),
+              Text("Wizh Trip", style: TText.bodySSemiBold(color: TColors.baseWhite)),
               Const.gap(x: 16),
             ],
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
@@ -66,11 +67,11 @@ class VHomeMobile extends StatelessWidget {
                                 children: [
                                   const Icon(IconsaxPlusLinear.notification, color: TColors.primaryColor, size: 16),
                                   Const.gap(),
-                                  Text("Promo", style: TText.bodyXSMedium()),
+                                  Text("Promo", style: TText.bodyXXSSemiBold()),
                                 ],
                               ),
                               Const.gap(),
-                              Text("Daftar sekarang dapatkan promo liburan terbaru!", style: TText.bodyXSBold(color: TColors.primaryColor))
+                              Text("Daftar sekarang dapatkan promo liburan terbaru!", style: TText.bodyXXSBold(color: TColors.primaryColor))
                             ],
                           ),
                         ),
@@ -91,7 +92,7 @@ class VHomeMobile extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Image.asset(item.icon, width: 50, height: 50),
+                              Image.asset(item.icon, width: 80.w, height: 80.w),
                               Const.gap(x: 2),
                               Text(item.title, style: TText.bodyXSRegular(color: TColors.neutral60)),
                             ],
@@ -104,7 +105,7 @@ class VHomeMobile extends StatelessWidget {
                   Stack(
                     children: [
                       Container(
-                        margin: const EdgeInsets.only(bottom: 280),
+                        margin:  const EdgeInsets.only(bottom: 260),
                         padding: EdgeInsets.all(Const.parentMargin()),
                         decoration: const BoxDecoration(
                           gradient: LinearGradient(
@@ -125,8 +126,8 @@ class VHomeMobile extends StatelessWidget {
                               fit: BoxFit.cover,
                             ),
                             Const.gap(x: 8),
-                            Text("Healing ke Open/Private Trip.", style: TText.bodyBold(color: TColors.baseWhite)),
-                            Text("Rileks di akomodasi pilihan. Pesannya pake diskon OTW", style: TText.bodyMRegular(color: TColors.baseWhite)),
+                            Text("Healing ke Open/Private Trip.", style: TText.bodyMBold(color: TColors.baseWhite)),
+                            Text("Rileks di akomodasi pilihan. Pesannya pake diskon OTW", style: TText.bodyXSRegular(color: TColors.baseWhite)),
                             Const.gap(x: 10),
                           ],
                         ),

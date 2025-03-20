@@ -14,7 +14,7 @@ class WTripDetailGeneralInformation extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Villa Asri Makmur Sekali", style: TText.subHeadingBold()),
+          Text("Villa Asri Makmur Sekali", style: TText.bodyBold()),
           Const.gap(x: 2),
           Row(
             children: [
@@ -27,13 +27,13 @@ class WTripDetailGeneralInformation extends StatelessWidget {
                     RichText(
                       text: TextSpan(
                         children: [
-                          TextSpan(text: "4.5", style: TText.subHeadingBold(color: TColors.neutral60)),
+                          TextSpan(text: "4.5", style: TText.bodyBold(color: TColors.neutral60)),
                           TextSpan(text: "/5 (942 Review)", style: TText.bodyXSRegular(color: TColors.neutral60)),
                         ],
                       ),
                     ),
                     Const.gap(),
-                    Text("493RB+ Terjual", style: TText.bodySRegular()),
+                    Text("493RB+ Terjual", style: TText.bodyXXSRegular()),
                   ],
                 ),
               )
@@ -49,8 +49,8 @@ class WTripDetailGeneralInformation extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Jl. Raya Puncak, Cisarua, Bogor", style: TText.bodySRegular(color: TColors.neutral60), maxLines: 1, overflow: TextOverflow.ellipsis),
-                    Text("Indonesia", style: TText.bodySRegular(color: TColors.neutral60)),
+                    Text("Jl. Raya Puncak, Cisarua, Bogor", style: TText.bodyXSRegular(color: TColors.neutral60), maxLines: 1, overflow: TextOverflow.ellipsis),
+                    Text("Indonesia", style: TText.bodyXSRegular(color: TColors.neutral60)),
                   ],
                 ),
               ),
@@ -65,7 +65,7 @@ class WTripDetailGeneralInformation extends StatelessWidget {
               const Icon(IconsaxPlusBold.clock, size: 20, color: TColors.neutral60),
               Const.gap(x: 2),
               Expanded(
-                child: Text("Buka · Rabu · 09:00 - 17:00", style: TText.bodySRegular(color: TColors.neutral60), maxLines: 1, overflow: TextOverflow.ellipsis),
+                child: Text("Buka · Rabu · 09:00 - 17:00", style: TText.bodyXSRegular(color: TColors.neutral60), maxLines: 1, overflow: TextOverflow.ellipsis),
               ),
               Const.gap(x: 2),
               const Icon(IconsaxPlusLinear.arrow_right_3, size: 20),
