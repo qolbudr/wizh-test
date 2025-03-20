@@ -1,4 +1,4 @@
-package com.example.wizh_test
+package test.wizh.trip
 
 import io.flutter.embedding.android.FlutterActivity
 
