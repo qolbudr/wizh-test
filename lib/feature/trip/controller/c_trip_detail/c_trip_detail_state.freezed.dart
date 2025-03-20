@@ -17,6 +17,8 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$CTripDetailState {
   int get tabIndex => throw _privateConstructorUsedError;
+  double get headerOpacity => throw _privateConstructorUsedError;
+  List<TripModel> get recommendation => throw _privateConstructorUsedError;
   Status get status => throw _privateConstructorUsedError;
 
   /// Create a copy of CTripDetailState
@@ -32,7 +34,11 @@ abstract class $CTripDetailStateCopyWith<$Res> {
           CTripDetailState value, $Res Function(CTripDetailState) then) =
       _$CTripDetailStateCopyWithImpl<$Res, CTripDetailState>;
   @useResult
-  $Res call({int tabIndex, Status status});
+  $Res call(
+      {int tabIndex,
+      double headerOpacity,
+      List<TripModel> recommendation,
+      Status status});
 }
 
 /// @nodoc
@@ -51,6 +57,8 @@ class _$CTripDetailStateCopyWithImpl<$Res, $Val extends CTripDetailState>
   @override
   $Res call({
     Object? tabIndex = null,
+    Object? headerOpacity = null,
+    Object? recommendation = null,
     Object? status = null,
   }) {
     return _then(_value.copyWith(
@@ -58,6 +66,14 @@ class _$CTripDetailStateCopyWithImpl<$Res, $Val extends CTripDetailState>
           ? _value.tabIndex
           : tabIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      headerOpacity: null == headerOpacity
+          ? _value.headerOpacity
+          : headerOpacity // ignore: cast_nullable_to_non_nullable
+              as double,
+      recommendation: null == recommendation
+          ? _value.recommendation
+          : recommendation // ignore: cast_nullable_to_non_nullable
+              as List<TripModel>,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -74,7 +90,11 @@ abstract class _$$CTripDetailStateImplCopyWith<$Res>
       __$$CTripDetailStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int tabIndex, Status status});
+  $Res call(
+      {int tabIndex,
+      double headerOpacity,
+      List<TripModel> recommendation,
+      Status status});
 }
 
 /// @nodoc
@@ -91,6 +111,8 @@ class __$$CTripDetailStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? tabIndex = null,
+    Object? headerOpacity = null,
+    Object? recommendation = null,
     Object? status = null,
   }) {
     return _then(_$CTripDetailStateImpl(
@@ -98,6 +120,14 @@ class __$$CTripDetailStateImplCopyWithImpl<$Res>
           ? _value.tabIndex
           : tabIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      headerOpacity: null == headerOpacity
+          ? _value.headerOpacity
+          : headerOpacity // ignore: cast_nullable_to_non_nullable
+              as double,
+      recommendation: null == recommendation
+          ? _value._recommendation
+          : recommendation // ignore: cast_nullable_to_non_nullable
+              as List<TripModel>,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -110,18 +140,34 @@ class __$$CTripDetailStateImplCopyWithImpl<$Res>
 
 class _$CTripDetailStateImpl implements _CTripDetailState {
   const _$CTripDetailStateImpl(
-      {this.tabIndex = 0, this.status = const Status.initial()});
+      {this.tabIndex = 0,
+      this.headerOpacity = 0.0,
+      final List<TripModel> recommendation = const [],
+      this.status = const Status.initial()})
+      : _recommendation = recommendation;
 
   @override
   @JsonKey()
   final int tabIndex;
   @override
   @JsonKey()
+  final double headerOpacity;
+  final List<TripModel> _recommendation;
+  @override
+  @JsonKey()
+  List<TripModel> get recommendation {
+    if (_recommendation is EqualUnmodifiableListView) return _recommendation;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_recommendation);
+  }
+
+  @override
+  @JsonKey()
   final Status status;
 
   @override
   String toString() {
-    return 'CTripDetailState(tabIndex: $tabIndex, status: $status)';
+    return 'CTripDetailState(tabIndex: $tabIndex, headerOpacity: $headerOpacity, recommendation: $recommendation, status: $status)';
   }
 
   @override
@@ -131,11 +177,16 @@ class _$CTripDetailStateImpl implements _CTripDetailState {
             other is _$CTripDetailStateImpl &&
             (identical(other.tabIndex, tabIndex) ||
                 other.tabIndex == tabIndex) &&
+            (identical(other.headerOpacity, headerOpacity) ||
+                other.headerOpacity == headerOpacity) &&
+            const DeepCollectionEquality()
+                .equals(other._recommendation, _recommendation) &&
             (identical(other.status, status) || other.status == status));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, tabIndex, status);
+  int get hashCode => Object.hash(runtimeType, tabIndex, headerOpacity,
+      const DeepCollectionEquality().hash(_recommendation), status);
 
   /// Create a copy of CTripDetailState
   /// with the given fields replaced by the non-null parameter values.
@@ -148,11 +199,18 @@ class _$CTripDetailStateImpl implements _CTripDetailState {
 }
 
 abstract class _CTripDetailState implements CTripDetailState {
-  const factory _CTripDetailState({final int tabIndex, final Status status}) =
-      _$CTripDetailStateImpl;
+  const factory _CTripDetailState(
+      {final int tabIndex,
+      final double headerOpacity,
+      final List<TripModel> recommendation,
+      final Status status}) = _$CTripDetailStateImpl;
 
   @override
   int get tabIndex;
+  @override
+  double get headerOpacity;
+  @override
+  List<TripModel> get recommendation;
   @override
   Status get status;
 
